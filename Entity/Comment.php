@@ -39,7 +39,7 @@ abstract class Comment
     }
 
     function setComment(string $text) {
-        $this->comment = $text;
+        $this->comment = htmlentities($text);
     }
 
     function getComment() :string {
