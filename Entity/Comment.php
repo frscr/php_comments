@@ -12,7 +12,10 @@ abstract class Comment
     private $comment;
 
     function setId(int $id) {
-        $this->id = $id;
+        if(is_int($id)){
+            $this->id = $id;
+        }
+
     }
 
     function getId(): int {
@@ -20,7 +23,7 @@ abstract class Comment
     }
 
     function setGuestName(string $name) {
-        $this->guest_name = $name;
+        $this->guest_name = htmlentities($name);
     }
 
     function getGuestName(): string {

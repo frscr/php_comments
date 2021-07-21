@@ -37,7 +37,7 @@ class ModelComment extends Comment
         $sql->execute();
         foreach ($sql as $row) {
             $comments[] = ['id'=>$row['id'], 'guest_name'=>$row['guest_name'],
-                           'date_publucation' => $row['date_publication'], 'comment'=>$row['comment']];
+                           'date_publication' => $row['date_publication'], 'comment'=>$row['comment']];
         }
         return $comments;
     }
